@@ -1,0 +1,5 @@
+C:\Users\is-19-1k\Desktop\otmeniltp\REG_MARK_LIB\REG_MARK_LIB\bin\Debug\REG_MARK_LIB.dll
+C:\Users\is-19-1k\Desktop\otmeniltp\REG_MARK_LIB\REG_MARK_LIB\bin\Debug\REG_MARK_LIB.pdb
+C:\Users\is-19-1k\Desktop\otmeniltp\REG_MARK_LIB\REG_MARK_LIB\obj\Debug\REG_MARK_LIB.csproj.CoreCompileInputs.cache
+C:\Users\is-19-1k\Desktop\otmeniltp\REG_MARK_LIB\REG_MARK_LIB\obj\Debug\REG_MARK_LIB.dll
+C:\Users\is-19-1k\Desktop\otmeniltp\REG_MARK_LIB\REG_MARK_LIB\obj\Debug\REG_MARK_LIB.pdb
