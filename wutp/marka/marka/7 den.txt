@@ -1,0 +1,63 @@
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using fds;
+namespace ascafadf
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        [TestMethod]
+        public void TestMethod1() // 5FNRL5H2XCB183642    WVGAV7AX3BW390470    2C3CCAKT5CH834724  YV1672MK0D2114467
+        {                             
+            string a = "TRUDD38J481844056";      // DFS1261E8F4F4A8F4454F 4FS5A4F5A4S F4AS48SA4F4 F4AS5 441
+            bool ex = true;
+            bd c = new bd();
+            bool act = c.CheckVIN(a);
+            Assert.AreEqual(ex, act);
+        }
+        [TestMethod]
+        public void TestMethod2()
+        {
+            string a = "а123сн115";
+            bool ex = true;
+            bd v = new bd();
+            bool act = v.CheckMark(a);
+            Assert.AreEqual(ex, act);
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+
+namespace fds
+{
+    public class bd
+    {
+        public Boolean CheckVIN(string vin)
+        {
+            Regex regex = new Regex(@"^[1-9ABCDEFGHJKLMNPRSTUVWXYZ]{1}[0-9ABCDEFGHJKLMNPRSTUVWXYZ]{1}[0-9ABCDEFGHJKLMNPRSTUVWXYZ]{6}[0-9ABCDEFGHJKLMNPRSTUVWXYZ]{1}[0-9ABCDEFGHJKLMNPRSTUVWXYZ]{8}$");
+            MatchCollection matches = regex.Matches(vin);
+            if (matches.Count > 0)
+            {
+                foreach (Match match in matches)
+                    return true;
+            }
+            return false;
+        }
+        public Boolean CheckMark(String mark)
+        {
+            Regex regex = new Regex(@"^[АВЕКМНОРСТУХавекмнорстух]{1}[0-9]{3}(?<!0{3})[АВЕКМНОРСТУХавекмнорстух]{2}[0.1]{1}[123567]{1}[0.1-9]{1}$");
+            MatchCollection matches = regex.Matches(mark);
+            if (matches.Count > 0)
+            {
+                foreach (Match match in matches)
+                    return true;
+            }
+            return false;
+        }
+    }
+}
